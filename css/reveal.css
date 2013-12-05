@@ -82,9 +82,9 @@ body {
 }
 
 .reveal h1 { font-size: 3.77em; }
-.reveal h2 { font-size: 2.11em;	}
-.reveal h3 { font-size: 1.55em;	}
-.reveal h4 { font-size: 1em;	}
+.reveal h2 { font-size: 2.55em;	}
+.reveal h3 { font-size: 1.5em;	}
+.reveal h4 { font-size: 1.2em;	}
 
 
 /*********************************************
@@ -532,7 +532,7 @@ body {
 
 	overflow: visible;
 	z-index: 1;
-	text-align: center;
+	text-align: left;
 
 	-webkit-transition: -webkit-perspective .4s ease;
 	   -moz-transition: -moz-perspective .4s ease;
@@ -560,7 +560,7 @@ body {
 	display: none;
 	position: absolute;
 	width: 100%;
-	padding: 20px 0px;
+	padding: 0px 0px;
 
 	z-index: 10;
 	line-height: 1.2em;
@@ -1214,12 +1214,12 @@ body {
 
 .no-transforms .reveal .slides {
 	position: relative;
-	width: 80%;
+	width: 100%;
 	height: auto !important;
 	top: 0;
 	left: 50%;
 	margin: 0;
-	text-align: center;
+	text-align: left;
 }
 
 .no-transforms .reveal .controls,
