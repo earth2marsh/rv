@@ -71,6 +71,17 @@ body {
 	padding-left:40px;
 }
 
+.reveal .title {
+	background-image:url('/images/title.png');
+	background-repeat:no-repeat;
+	background-position:right top;
+	height:100%;
+	display: flex!important;
+    align-items: flex-end;
+}
+
+
+
 /*********************************************
  * LINKS
  *********************************************/
