@@ -58,7 +58,7 @@ body {
   margin-bottom: 40px;
   height: 96px;
   background-color: #f1f1f1;
-  background-image: url("/images/header.svg");
+  background-image: url("../../images/header.svg");
   background-repeat: no-repeat;
   background-position: right top; }
 
@@ -66,7 +66,7 @@ body {
   padding-left: 40px; }
 
 .reveal .title {
-  background-image: url("/images/title.png");
+  background-image: url("../../images/title.png");
   background-repeat: no-repeat;
   background-position: right top;
   height: 100%;
