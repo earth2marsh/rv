@@ -72,7 +72,7 @@ body {
 }
 
 .reveal .title {
-	background-image:url('../../images/title.png');
+	background-image:url('../../images/title.svg');
 	background-repeat:no-repeat;
 	background-position:right top;
 	height:100%;
@@ -80,7 +80,14 @@ body {
     align-items: flex-end;
 }
 
-
+.reveal .divider {
+	background-image:url('../../images/divider.svg');
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	height:100%;
+	display: flex!important;
+    align-items: flex-end;
+}
 
 /*********************************************
  * LINKS
