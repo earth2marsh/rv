@@ -24,7 +24,8 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
+		<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><script type="text/javascript" src="//use.typekit.net/ezw2jtl.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -38,6 +39,8 @@
 			<div class="slides" style="width:100%!important;height:100%!important">
 				<section class="title">
 					<div style="padding:0 0 40px 40px">
+						<img style="border:none;box-shadow:none;margin:0" src="images/apigee.svg"/>
+						<p id="date"></p>
 						<h1 style="line-height:1.1em;font-size:2.4em">ResourceVerb (RV)</h1>
 						<h3 style="font-size:1.4em">Adoption-Centered API Design</h3>
 						<p style="line-height:1.4em;font-weight:600;font-size:1.2em">
@@ -47,12 +50,10 @@
 				</article>
 				</section>
 				<section class="divider">
-					<div style="padding:0 0 40px 40px">
-						<h1>Section header</h1>
-					</div>
+					<h1>Section header</h1>
 				</article>
 				</section>
-				<section>				<section>
+				<section>
 					<header>
 						<h1>Use the API Console</h1>					
 					</header>
@@ -502,7 +503,7 @@
 				height: '100%',
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -518,10 +519,16 @@
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
         			// Remote control your reveal.js presentation using a touch device
 			        // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-					{ src: 'https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js', async: false, condition: function() { return !!document.body.classList; } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js', async: false, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
+			Reveal.addEventListener( 'ready', function( event ) {
+				// event.currentSlide, event.indexh, event.indexv
+				$('#date').html(moment().format("Do MMMM YYYY"));
+			} );
+			
 		</script>
 
 	</body>
