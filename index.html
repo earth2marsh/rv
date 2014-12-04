@@ -530,6 +530,24 @@
 			} );
 			
 		</script>
-
+<script type="text/javascript">
+    //Google Analytics
+    var _gaq = _gaq || [];
+    //_gaq.push(['_setAccount', 'yours']);
+    try{
+        (function(document) {
+            if(!document){
+                return;
+            }
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							ga.src = 'http://demo-test.apigee.net/google-analytics/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })(document || null);
+    }catch(e){};
+    //End Google Analytics
+  ga('create', 'UA-173290-1', 'earth2marsh.github.io');
+  ga('send', 'pageview');
+</script>
 	</body>
 </html>
