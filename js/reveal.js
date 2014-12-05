@@ -2535,7 +2535,7 @@ var Reveal = (function(){
 	}
 
 	function navigateLeft() {
-
+		 _gaq.push(['_trackEvent', 'Controls', 'Prev']);
 		// Reverse for RTL
 		if( config.rtl ) {
 			if( ( isOverview() || nextFragment() === false ) && availableRoutes().left ) {
@@ -2550,7 +2550,7 @@ var Reveal = (function(){
 	}
 
 	function navigateRight() {
-
+		 _gaq.push(['_trackEvent', 'Controls', 'Next']);
 		// Reverse for RTL
 		if( config.rtl ) {
 			if( ( isOverview() || previousFragment() === false ) && availableRoutes().right ) {
@@ -2952,8 +2952,8 @@ var Reveal = (function(){
 	/**
 	 * Event handler for navigation control buttons.
 	 */
-	function onNavigateLeftClicked( event ) { event.preventDefault(); onUserInput(); _gaq.push(['_trackEvent', 'Controls', 'Next']); navigateLeft(); }
-	function onNavigateRightClicked( event ) { event.preventDefault(); onUserInput(); _gaq.push(['_trackEvent', 'Controls', 'Prev']); navigateRight(); }
+	function onNavigateLeftClicked( event ) { event.preventDefault();  onUserInput(); navigateLeft(); }
+	function onNavigateRightClicked( event ) { event.preventDefault(); onUserInput(); navigateRight(); }
 	function onNavigateUpClicked( event ) { event.preventDefault(); onUserInput(); navigateUp(); }
 	function onNavigateDownClicked( event ) { event.preventDefault(); onUserInput(); navigateDown(); }
 	function onNavigatePrevClicked( event ) { event.preventDefault(); onUserInput(); navigatePrev(); }
